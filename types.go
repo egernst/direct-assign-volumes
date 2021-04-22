@@ -25,6 +25,9 @@ type DiskMountInfo struct {
 }
 
 type FsStats struct {
-	UsageInBytes uint `json:"usageInBytes,omitempty"`
-	IsMounted    bool `json:"isMounted,omitempty"`
+	UsedBytes  uint64 `json:"usedBytes,omitempty"`
+	FreeBytes  uint64 `json:"freeBytes,omitempty"`
+	TotalBytes uint64 `json:"totalBytes,omitempty"`
+	Files      uint64 `json:"files,omitempty"`
+	IsMounted  bool   `json:"isMounted,omitempty"`
 }
